@@ -1,0 +1,29 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Sun Sep 19 20:43:38 2021
+
+@author: ArDC
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+rhos = 1.2
+A = 0.1
+v = 5
+
+cd = np.linspace(.1,1,20)
+dragc = []
+constant = 0.5*rhos*A*v*v
+
+for vel in cd:
+    dragc.append(constant*vel)
+
+plt.plot(cd,dragc)
+plt.xlabel("Drag Coefficient")
+plt.ylabel("Drag Force in Newtons")
+plt.title("Drag - Cd") 
+plt.legend()
+plt.show()
+
+
